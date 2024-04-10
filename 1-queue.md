@@ -10,9 +10,26 @@ Buffering: Queues can act as a buffer between two processes or components, ensur
 Python offers a built-in module called queue that provides implementations for various types of queues. One of the most commonly used types is the
 Queue class from this module.
 
+## Big O Notation in Queues
+
+The queue data structure contributes to code efficiency by offering a first-in-first-out (FIFO) mechanism for data manipulation. Here's how it
+achieves that:
+
+**Order Preservation:** Queues maintain the order in which elements are added, ensuring that they are processed in the same sequence. This
+property is beneficial for tasks such as job scheduling, where the order of execution matters.
+
+**Efficient Insertion and Removal:** Queues support constant-time insertion and removal operations at both ends (enqueue and dequeue), making them
+suitable for scenarios where elements are frequently added or removed from the data structure.
+
+**Resource Management:** Queues help manage resources efficiently by controlling the flow of data or tasks. For example, in a producer-consumer
+scenario, a queue can act as a buffer between producers and consumers, regulating the rate at which data is processed.
+
+**Synchronization:** In multi-threaded or concurrent environments, queues provide a synchronization mechanism, ensuring that threads access shared
+resources in a coordinated manner. This helps prevent race conditions and ensures thread safety.
+
 ## Explanation to example code
 
-Please See queue_1.py before continuing 
+Please See [Link to Python Script](queue_1.py) before continuing 
 
 In this example, we import the Queue class from the queue module and create a queue named my_queue. We then enqueue elements using the put()
 method and dequeue them using the get() method. The empty() method checks if the queue is empty, and qsize() returns the size of the queue.
@@ -22,7 +39,7 @@ method and dequeue them using the get() method. The empty() method checks if the
 
 ### Given a queue of tasks represented by their priorities, process the tasks in order of their priority.
 
-Please See queue_1.py before continuing 
+Please See [Link to Python Script](queue_1.py) before continuing 
 
 In this example, we use a PriorityQueue from the queue module to manage tasks based on their priorities. Tasks with lower priority numbers are
 processed first. We define a function process_tasks() to dequeue and process tasks until the queue is empty.
